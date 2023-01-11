@@ -1,0 +1,23 @@
+@import url("./reset.min.css");
+@import url("./variables.css");
+@import url("./credit-card.css");
+@import url("./form.css");
+
+#app {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--white);
+  min-width: 360px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 1140px) {
+  .main {
+    flex-direction: row;
+  }
+}

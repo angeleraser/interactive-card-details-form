@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <div id="app">
+      <main class="main">
+        <section class="credit-card-section">
+          <div class="credit-card-container">
+            <div class="credit-card-front credit-card">
+              <img class="credit-card-logo" src="./images/card-logo.svg" />
+              <div id="credit-card-number" class="credit-card-number">
+                <span>0000</span>
+                <span>0000</span>
+                <span>0000</span>
+                <span>0000</span>
+              </div>
+              <div class="credit-card-owner">
+                <span id="credit-card-ownername"></span>
+                <span id="credit-card-expdate" class="credit-card-expdate"></span>
+              </div>
+            </div>
+
+            <div class="credit-card credit-card-back">
+              <div id="credit-card-cvc" class="credit-card-cv"></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="form-section" class="form-section">
+          <fieldset>
+            <legend>Credit card info</legend>
+
+            <form id="form" class="form-container">
+              <label
+                id="input-cardholder-name"
+                class="form-input-field"
+                for="name"
+              >
+                <span class="form-input-label">Cardholder name</span>
+
+                <div class="form-input-wrapper">
+                  <input
+                    name="name"
+                    id="name"
+                    placeholder="e.g Jane Appleseed"
+                    type="text"
+                  />
+                  <div class="input-border"></div>
+                </div>
+
+                <div class="form-input-invalid-msg">Cant be blank</div>
+              </label>
+
+              <label
+                id="input-card-number"
+                class="form-input-field"
+                for="card-number"
+              >
+                <span class="form-input-label">Cardholder Number</span>
+                <div class="form-input-wrapper">
+                  <input
+                    placeholder="0000 0000 0000 0000"
+                    type="text"
+                    maxlength="19"
+                    id="card-number"
+                  />
+                  <div class="input-border"></div>
+                </div>
+
+                <div class="form-input-invalid-msg">Cant be blank</div>
+              </label>
+
+              <div class="form-multifield form-multifield-wrapper">
+                <label
+                  id="input-card-expdate"
+                  class="form-input-field"
+                  for="expdate"
+                >
+                  <span class="form-input-label">Exp. date (MM/YY)</span>
+
+                  <div class="form-multifield">
+                    <div class="form-input-wrapper">
+                      <input
+                        maxlength="2"
+                        placeholder="MM"
+                        type="text"
+                        id="expdate"
+                      />
+                      <div class="input-border"></div>
+                    </div>
+
+                    <div class="form-input-wrapper">
+                      <input
+                        maxlength="2"
+                        placeholder="YY"
+                        type="text"
+                        id="expdate1"
+                      />
+                      <div class="input-border"></div>
+                    </div>
+                  </div>
+                  <div class="form-input-invalid-msg">Cant be blank</div>
+                </label>
+
+                <label id="input-card-cvc" class="form-input-field" for="cvc">
+                  <span class="form-input-label">CVC</span>
+                  <div class="form-input-wrapper">
+                    <input
+                      maxlength="3"
+                      placeholder="123"
+                      type="text"
+                      name="cvc"
+                      id="cvc"
+                    />
+                    <div class="input-border"></div>
+                  </div>
+
+                  <div class="form-input-invalid-msg">Cant be blank</div>
+                </label>
+              </div>
+
+              <button class="btn submit-btn">Confirm</button>
+            </form>
+          </fieldset>
+        </section>
+
+        <section
+          id="complete-form-section"
+          style="display: none"
+          class="complete-form-section"
+        >
+          <div class="complete-form-content">
+            <img src="./images/icon-complete.svg" alt="Icon complete" />
+
+            <h1 class="complete-form-title">Thank you!</h1>
+
+            <p class="complete-form-msg">We've added your card details</p>
+
+            <button id="continue-btn" class="btn">Continue</button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

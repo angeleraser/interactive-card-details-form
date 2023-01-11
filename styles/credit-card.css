@@ -1,0 +1,142 @@
+.credit-card-section {
+  display: flex;
+  padding: 26px 16px;
+  background-image: url("../images/bg-main-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  margin-bottom: 64px;
+  width: 100%;
+}
+
+.credit-card-container {
+  position: relative;
+  min-height: 186px;
+  max-width: 480px;
+  width: 100%;
+  margin: auto auto 0;
+  min-width: 320px;
+}
+
+.credit-card {
+  border-radius: 8px;
+  max-width: 286px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  font-family: var(--font-space);
+  color: var(--white);
+  font-size: var(--base-fs);
+  letter-spacing: 2.5px;
+  min-height: 154px;
+  position: absolute;
+  min-width: 260px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.credit-card-front {
+  background-image: url("../images/bg-card-front.png");
+  padding: 18px;
+}
+
+.credit-card-logo {
+  display: inline-block;
+  width: 44px;
+}
+
+.credit-card-number {
+  margin: 40px 0 24px;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.credit-card-owner {
+  display: flex;
+  font-size: 0.6em;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.credit-card-back {
+  position: absolute;
+  background-image: url("../images/bg-card-back.png");
+}
+
+.credit-card-cv {
+  position: absolute;
+  top: 46%;
+  right: 10%;
+  font-size: 0.6em;
+}
+
+.credit-card-front {
+  bottom: -56px;
+  z-index: 5;
+}
+
+.credit-card-back {
+  right: 16px;
+}
+
+@media screen and (min-width: 1140px) {
+  .credit-card-section {
+    height: 100vh;
+    flex-basis: 40%;
+    padding: 0;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .credit-card-container {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: auto 0 auto;
+    max-width: 100%;
+  }
+
+  .credit-card-logo {
+    width: 84px;
+  }
+
+  .credit-card {
+    position: relative;
+    min-height: 242px;
+    max-width: 448px;
+    padding: 34px;
+    min-height: 250px;
+  }
+
+  .credit-card-front {
+    bottom: auto;
+    margin-right: -30px;
+    margin-bottom: 34px;
+  }
+
+  .credit-card-back {
+    right: auto;
+    margin-right: -75px;
+  }
+
+  .credit-card-number {
+    font-size: 1.25em;
+    margin: 60px 0 34px;
+    letter-spacing: 6px;
+  }
+
+  .credit-card-owner,
+  .credit-card-cv {
+    font-size: 0.85em;
+  }
+}
+
+@media (min-width: 1280px) {
+  .credit-card-front {
+    margin-right: -60px;
+  }
+
+  .credit-card-back {
+    margin-right: -150px;
+  }
+}
